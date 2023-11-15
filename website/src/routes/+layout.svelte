@@ -1,6 +1,4 @@
 <script>
-export const prerender = true;
-
 import { dev } from '$app/environment';
 </script>
 
