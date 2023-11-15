@@ -25,6 +25,7 @@ jobs:
         with:
           node-version: 18
           cache: yarn
+          cache-dependency-path: '**/yarn.lock'
 
       - run: corepack enable
       - name: Install dependencies
