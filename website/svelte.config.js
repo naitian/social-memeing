@@ -12,7 +12,7 @@ export default {
 			strict: true
 		}),
 		paths: {
-			base: process.argv.includes('dev') ? '' : "semantic-memes"
+			base: process.argv.includes('dev') ? '' : process.env.BASE_PATH
 		}
 	}
 };
