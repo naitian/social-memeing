@@ -1,4 +1,5 @@
 <script>
+import {base} from "$app/paths";
 let selectedCluster = -1;
 const clusters = [
   {
@@ -6,11 +7,11 @@ const clusters = [
     memes: [
       {
         subreddit: "r/Animemes",
-        path: "./variation/declare/anime.png"
+        path: `${base}/variation/declare/anime.png`
       },
       {
         subreddit: "r/memes",
-        path: "./variation/declare/lisa.png"
+        path: `${base}/variation/declare/lisa.png`
       },
     ]
   },
@@ -19,23 +20,23 @@ const clusters = [
     memes: [
       {
         subreddit: "r/Animemes",
-        path: "./variation/compare/anime.png"
+        path: `${base}/variation/compare/anime.png`
       },
       {
         subreddit: "r/dndmemes",
-        path: "./variation/compare/dnd.png"
+        path: `${base}/variation/compare/dnd.png`
       },
       {
         subreddit: "r/PrequelMemes",
-        path: "./variation/compare/prequel.png"
+        path: `${base}/variation/compare/prequel.png`
       },
       {
         subreddit: "r/startrekmemes",
-        path: "./variation/compare/startrek.png"
+        path: `${base}/variation/compare/startrek.png`
       },
       {
         subreddit: "r/memes",
-        path: "./variation/compare/drake.png"
+        path: `${base}/variation/compare/drake.png`
       },
     ]
   },
@@ -44,15 +45,15 @@ const clusters = [
     memes: [
       {
         subreddit: "r/MinecraftMemes",
-        path: "./variation/scalar/minecraft.png"
+        path: `${base}/variation/scalar/minecraft.png`
       },
       {
         subreddit: "r/dndmemes",
-        path: "./variation/scalar/dnd.png"
+        path: `${base}/variation/scalar/dnd.png`
       },
       {
         subreddit: "r/memes",
-        path: "./variation/scalar/pooh.png"
+        path: `${base}/variation/scalar/pooh.png`
       },
     ]
   },
