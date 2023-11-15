@@ -6,11 +6,11 @@ const clusters = [
     memes: [
       {
         subreddit: "r/Animemes",
-        path: "/variation/declare/anime.png"
+        path: "./variation/declare/anime.png"
       },
       {
         subreddit: "r/memes",
-        path: "/variation/declare/lisa.png"
+        path: "./variation/declare/lisa.png"
       },
     ]
   },
@@ -19,23 +19,23 @@ const clusters = [
     memes: [
       {
         subreddit: "r/Animemes",
-        path: "/variation/compare/anime.png"
+        path: "./variation/compare/anime.png"
       },
       {
         subreddit: "r/dndmemes",
-        path: "/variation/compare/dnd.png"
+        path: "./variation/compare/dnd.png"
       },
       {
         subreddit: "r/PrequelMemes",
-        path: "/variation/compare/prequel.png"
+        path: "./variation/compare/prequel.png"
       },
       {
         subreddit: "r/startrekmemes",
-        path: "/variation/compare/startrek.png"
+        path: "./variation/compare/startrek.png"
       },
       {
         subreddit: "r/memes",
-        path: "/variation/compare/drake.png"
+        path: "./variation/compare/drake.png"
       },
     ]
   },
@@ -44,15 +44,15 @@ const clusters = [
     memes: [
       {
         subreddit: "r/MinecraftMemes",
-        path: "/variation/scalar/minecraft.png"
+        path: "./variation/scalar/minecraft.png"
       },
       {
         subreddit: "r/dndmemes",
-        path: "/variation/scalar/dnd.png"
+        path: "./variation/scalar/dnd.png"
       },
       {
         subreddit: "r/memes",
-        path: "/variation/scalar/pooh.png"
+        path: "./variation/scalar/pooh.png"
       },
     ]
   },

@@ -1,9 +1,9 @@
 <script> 
   const clusters = [
-    {name: "Declaration", path: "/semclusters/declare.png"},
-    {name: "Scalar increase", path: "/semclusters/scalar.png"},
-    {name: "Similarity / parts of a whole", path: "/semclusters/similarity.png"},
-    {name: "Surprise narrative", path: "/semclusters/surprise.png"},
+    {name: "Declaration", path: "./semclusters/declare.png"},
+    {name: "Scalar increase", path: "./semclusters/scalar.png"},
+    {name: "Similarity / parts of a whole", path: "./semclusters/similarity.png"},
+    {name: "Surprise narrative", path: "./semclusters/surprise.png"},
   ]
 
   let selectedCluster = 0;

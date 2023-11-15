@@ -53,7 +53,7 @@
     <path d="m129.951 15.503-6.3-2.1 6.3-2.1v4.2Z" style="fill:#e69138"/>
     <path d="M142.621 13.403h-13.93" style="fill:none;stroke:#e69138;stroke-width:1px;stroke-linecap:round;stroke-miterlimit:1.5"/>
     <defs>
-        <image id="a" width="105" height="105" xlink:href="/drake.jpeg"/>
+        <image id="a" width="105" height="105" xlink:href="./drake.jpeg"/>
     </defs>
 </svg>
 <div class="translation">"I prefer <span class="fill">{bottomtext}</span> to <span class="fill">{toptext}</span>"</div>
