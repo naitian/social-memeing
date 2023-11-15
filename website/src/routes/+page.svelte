@@ -1,10 +1,10 @@
 <script>
 import SmallCaps from '$lib/SmallCaps.svelte';
-import Wide from '../lib/Wide.svelte';
-import Figure from '../lib/Figure.svelte';
+import Wide from '$lib/Wide.svelte';
+import Figure from '$lib/Figure.svelte';
 import Variation from '$lib/Variation.svelte';
-import Dissection from '../lib/Dissection.svelte';
-import SemClusters from '../lib/SemClusters.svelte';
+import Dissection from '$lib/Dissection.svelte';
+import SemClusters from '$lib/SemClusters.svelte';
 
 import { balancer } from "svelte-action-balancer";
 
