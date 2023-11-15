@@ -61,7 +61,6 @@
 
 <style>
 svg {
-  width: 80%;
   display: block;
   margin: 0 auto;
 }

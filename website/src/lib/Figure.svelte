@@ -2,10 +2,12 @@
 export let caption;
 export let title;
 
+export let width = "100%";
+
 import { balancer } from "svelte-action-balancer";
 </script>
 
-<figure>
+<figure style:width={width}>
   {#if title}
   <h3>{title}</h3>
   {/if}

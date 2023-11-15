@@ -119,7 +119,7 @@ img {
   font-family: Open Sans, sans-serif;
   overflow-x: scroll;
   padding: 2px;
-  height: 190px;
+  height: 210px;
 }
 
 .cluster {

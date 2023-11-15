@@ -13,7 +13,7 @@ import { balancer } from "svelte-action-balancer";
 
 <header>
   <Wide><h1 class="title" use:balancer={{ enabled: true, ratio: .5 }}>
-    Social meme-ing: Measuring linguistic variation in memes
+    Social Meme-ing: Measuring Linguistic Variation in Memes
   </h1></Wide>
 
   <div class="authors">
@@ -28,7 +28,8 @@ import { balancer } from "svelte-action-balancer";
 
   <div class="links">
     <a href="#">📝 Read the Paper</a>
-    <a href="https://github.com/naitian/semantic-memes">💻 View the Code</a>
+    <a href="https://github.com/naitian/social-memeing">💻 View the Code</a>
+    <a href="#data">📊 Get the data</a>
   </div>
 
 </header>
@@ -44,28 +45,40 @@ import { balancer } from "svelte-action-balancer";
   </p>
   <h2>Highlights</h2>
 
-  <p>
-  <b>We learn the semantics of meme templates.</b> We take advantage of the
-    multimodal structure of memes to develop a method that learns template
-    semantics without supervision (section 2).
-  <Figure caption="Memes are multimodal constructions where the base image <span style='font-weight: bold; color: #E69138'>template</span> and additional text <span style='font-weight: bold; color: #3C78D8'>fills</span> both have semantic value."> <Dissection/> </Figure>
-  </p>
+  <Wide>
+    <div style:display="flex">
 
-  <p> 
-  <b>We create the <SmallCaps>SemanticMemes</SmallCaps> dataset.</b> We use
-    this method to construct and make available a dataset of 3.8M Reddit memes
-    grouped into semantic clusters (section 3).
-    <Figure caption="Visually diverse clusters emerge even for complex semantic functions like a surprise narrative."> 
-      <SemClusters/>
-    </Figure>
-  </p>
+      <div style:width="60%">
 
-  <p>
-    <b>Memes have socially meaningful linguistic variation.</b>
-    We find that, not only do subreddits prefer certain variants of a template
-    over others, but they choose templates that index into a localized cultural
-    knowledge, making cultural allusions to characters or celebrities (section 5). Click
-    below to see examples.
+        <p>
+          <b>We learn the semantics of meme templates without supervision.</b> We
+          take advantage of the multimodal structure to learn how fill text
+          aligns with the template by fine-tuning a RoBERTa model, giving
+          semantic embeddings for templates which we can then cluster. 
+        </p>
+
+        <p> 
+          <b>We create the <SmallCaps>SemanticMemes</SmallCaps> dataset.</b> We use
+          this method to construct and make available a dataset of 3.8M Reddit memes
+          grouped into semantically coherent clusters.
+        </p>
+
+        <p>
+          <b>We find memes with socially meaningful variation.</b>
+          Not only do subreddits prefer certain variants of a template over
+          others, but they choose templates that index into a localized
+          cultural knowledge, making cultural allusions to characters or
+          celebrities. Click below to see examples.
+
+        </p>
+
+      </div>
+
+      <div style:float="right" style:display="inline" style:width="40%">
+        <Figure caption="Memes are multimodal constructions where the base image <span style='font-weight: bold; color: #E69138'>template</span> and additional text <span style='font-weight: bold; color: #3C78D8'>fills</span> both have semantic value."> <Dissection/> </Figure>
+      </div>
+    </div>
+  </Wide>
   <Wide>
     <Figure 
       caption="Different subreddits systematically prefer some meme
@@ -73,14 +86,20 @@ import { balancer } from "svelte-action-balancer";
       <Variation/>
     </Figure>
   </Wide>
-
-  </p>
-
   <p> 
-    What's more, we find that the patterns of linguistic innovation (section 6) and
-    acculturation (section 7) that has been observed in text also occurs with memes!
+    What's more, we find that patterns of linguistic innovation  and
+    acculturation that have been previously observed in text also occur with
+    memes! Read the paper for more details about these experiments, as well as
+    our experiments with using CLIP to train a multimodal model and more
+    information about the evaluation process.
   </p>
 
+  <h2 id="data">Explore the data</h2>
+  <p>You can download the dataset with Reddit post ID, image URL, RoBERTa semantic cluster label, and template visual cluster label <a href="https://ischool.berkeley.edu/~naitian/social-memeing/semantic_memes_roberta.tar.gz">at this link</a> (63MB gzipped).</p>
+
+  <Figure title="Semantic clusters" caption="Visually diverse clusters emerge even for complex semantic functions like a surprise narrative."> 
+    <SemClusters/>
+  </Figure>
   <h2>Conclusion</h2>
   <p>
     We hope that this work will encourage more research into the social
@@ -88,6 +107,13 @@ import { balancer } from "svelte-action-balancer";
     dataset will be a useful resource for future work.
   </p>
 
+  <p> 
+    To cite this work:
+
+  </p>
+  <pre>
+    TBD
+  </pre>
 </div>
 
 
@@ -103,6 +129,10 @@ header {
   line-height: 1.2em;
   text-align: center;
   margin: auto;
+}
+
+.content {
+  font-family: Open Sans, sans-serif;
 }
 
 h2 {

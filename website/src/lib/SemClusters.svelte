@@ -7,19 +7,23 @@
     {name: "Surprise narrative", path: `${base}/semclusters/surprise.png`},
   ]
 
-  let selectedCluster = 0;
+  let selectedCluster = 3;
 </script>
 
 <div class="cluster-selector">
-  {#each clusters as cluster, i}
-    <button class:active={selectedCluster == i} on:click={() => selectedCluster = i}>
-      {#if selectedCluster == i}
-        <b>{cluster.name}</b>
-      {:else}
-      {cluster.name}
-      {/if}
-    </button>
-  {/each}
+  Semantic cluster: <select bind:value={selectedCluster}>
+    {#each clusters as cluster, i}
+      <option value={i}>{cluster.name}</option>
+    {/each}
+  <!-- {#each clusters as cluster, i} -->
+  <!--   <button class:active={selectedCluster == i} on:click={() => selectedCluster = i}> -->
+  <!--     {#if selectedCluster == i} -->
+  <!--       <b>{cluster.name}</b> -->
+  <!--     {:else} -->
+  <!--     {cluster.name} -->
+  <!--     {/if} -->
+  <!--   </button> -->
+  <!-- {/each} -->
 </div>
 <div>
   {#each clusters as cluster, i}
@@ -37,6 +41,6 @@ div {
   text-align: center;
 }
 img {
-  width: 80%;
+  width: 100%;
 }
 </style>
