@@ -24,16 +24,17 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 18
-          cache: npm
+          cache: yarn
 
+      - run: corepack enable
       - name: Install dependencies
-        run: npm install
+        run: yarn install
 
       - name: build
         env:
           BASE_PATH: '/${{ github.event.repository.name }}'
         run: |
-          npm run build
+          yarn run build
 
       - name: Upload Artifacts
         uses: actions/upload-pages-artifact@v2
