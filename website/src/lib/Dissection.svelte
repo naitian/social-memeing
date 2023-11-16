@@ -1,33 +1,44 @@
 <script>
   import {base} from "$app/paths";
-  let toptext = "Keras";
-  let bottomtext = "​"
+
+  let texts = {
+    toptext: "​",
+    bottomtext: "​"
+  }
+
+  const pairs = [
+    ["Keras", "Pytorch"],
+    ["PC", "Mac"],
+    ["Pepsi", "Coke"]
+  ]
 
 	const timeout = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
-	const backspace = async (length) => {
+	const backspace = async (length, key) => {
 		for (let i = 0; i < length; ++i) {
-			bottomtext = bottomtext.slice(0, bottomtext.length - 1);
+			texts[key] = texts[key].slice(0, texts[key].length - 1);
 			await timeout(60);
 		}
 	};
 
-	const type = async (append) => {
+	const type = async (append, key) => {
 		for (let i = 0, len = append.length; i < len; i++) {
-			bottomtext = bottomtext + append[i];
+			texts[key] = texts[key] + append[i];
 			await timeout(70);
 		}
 	};
 
 	const intro = async () => {
+    let i = 0;
     while (true) {
-      await type("Pytorch");
-      await timeout(7000);
-      await backspace(7);
-      await timeout(3000);
-      await type("Numpy");
-      await timeout(7000);
-      await backspace(5);
-      await timeout(3000);
+      const top = pairs[i][0];
+      const bottom = pairs[i][1];
+      await type(top, "toptext");
+      await type(bottom, "bottomtext")
+      await timeout(4000);
+      await backspace(bottom.length, "bottomtext");
+      await backspace(top.length, "toptext");
+      await timeout(300);
+      i = (i + 1) % pairs.length;
     }
 		// await type(' and I feel fine...');
 		/* await timeout(500); */
@@ -42,8 +53,8 @@
     <path style="fill:none;stroke:#e69138;stroke-width:1px" d="M18.348.772h104.823v104.823H18.348z"/>
     <path style="fill:#fff" d="M122.016 79.671h3.27v5.53h-3.27zM122.016 22.311h3.27v5.53h-3.27z"/>
     <path d="M121.006 73.648a2.416 2.416 0 0 0-2.415-2.415H77.409a2.416 2.416 0 0 0-2.414 2.415v19.319a2.416 2.416 0 0 0 2.414 2.415h41.182a2.416 2.416 0 0 0 2.415-2.415V73.648Z" style="fill:#3c78d8;fill-opacity:.31;stroke:#3c78d8;stroke-width:1px;stroke-linecap:round;stroke-miterlimit:1.5"/>
-    <text x="76.997" y="85.784" style="font-family:'RobotoMono-Bold','Roboto Mono',monospace;font-size:10px">{bottomtext}</text>
-    <text x="82.518" y="28.904" style="font-family:'RobotoMono-Bold','Roboto Mono',monospace;font-size:10px">{toptext}</text>
+    <text x="76.997" y="85.784" style="font-family:'RobotoMono-Bold','Roboto Mono',monospace;font-size:10px">{texts.bottomtext}</text>
+    <text x="82.518" y="28.904" style="font-family:'RobotoMono-Bold','Roboto Mono',monospace;font-size:10px">{texts.toptext}</text>
     <path d="M120.526 15.244a2.462 2.462 0 0 0-2.46-2.461H76.975a2.462 2.462 0 0 0-2.46 2.461v19.227a2.462 2.462 0 0 0 2.46 2.461h41.091a2.462 2.462 0 0 0 2.46-2.461V15.244Z" style="fill:#3c78d8;fill-opacity:.31;stroke:#3c78d8;stroke-width:1px;stroke-linecap:round;stroke-miterlimit:1.5"/>
     <path d="m126.826 22.757-6.3 2.1 6.3 2.1v-4.2Z" style="fill:#3c78d8"/>
     <path d="M125.566 24.857h2.165a5.397 5.397 0 0 1 5.4 5.4v32.372c0 1.433.569 2.806 1.581 3.819a5.405 5.405 0 0 0 3.819 1.581h4.09" style="fill:none;stroke:#3c78d8;stroke-width:1px;stroke-linecap:round;stroke-miterlimit:1.5"/>
@@ -57,7 +68,7 @@
         <image id="a" width="105" height="105" xlink:href={`${base}/drake.jpeg`}/>
     </defs>
 </svg>
-<div class="translation">"I prefer <span class="fill">{bottomtext}</span> to <span class="fill">{toptext}</span>"</div>
+<div class="translation">"I prefer <span class="fill">{texts.bottomtext}</span> to <span class="fill">{texts.toptext}</span>"</div>
 
 <style>
 svg {
@@ -67,11 +78,13 @@ svg {
 
 .fill {
   background-color: #C3D6F3;
+  color: black;
   border-radius: 3px;
   border: 1px solid #3c78d8;
   padding: 1px 3px;
 }
 .translation {
   text-align: center;
+  color: #e69138;
 }
 </style>

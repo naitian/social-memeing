@@ -97,7 +97,9 @@ import { balancer } from "svelte-action-balancer";
   <h2 id="data">Explore the data</h2>
   <p>You can download the dataset with Reddit post ID, image URL, RoBERTa semantic cluster label, and template visual cluster label <a href="https://ischool.berkeley.edu/~naitian/social-memeing/semantic_memes_roberta.tar.gz">at this link</a> (63MB gzipped).</p>
 
-  <Figure title="Semantic clusters" caption="Visually diverse clusters emerge even for complex semantic functions like a surprise narrative."> 
+  <p>Use the dropdown below to view some more examples of semantic clusters.</p>
+
+  <Figure caption="Visually diverse clusters emerge even for complex semantic functions like a surprise narrative."> 
     <SemClusters/>
   </Figure>
   <h2>Conclusion</h2>
