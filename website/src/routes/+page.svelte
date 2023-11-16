@@ -27,7 +27,7 @@ import { balancer } from "svelte-action-balancer";
   </div>
 
   <div class="links">
-    <a href="#">📝 Read the Paper</a>
+    <a href="https://arxiv.org/abs/2311.09130">📝 Read the Paper</a>
     <a href="https://github.com/naitian/social-memeing">💻 View the Code</a>
     <a href="#data">📊 Get the data</a>
   </div>
@@ -113,9 +113,16 @@ import { balancer } from "svelte-action-balancer";
     To cite this work:
 
   </p>
-  <pre>
-    TBD
-  </pre>
+  <pre><span></span>
+{`
+@misc{zhou2023social,
+      title={Social Meme-ing: Measuring Linguistic Variation in Memes}, 
+      author={Naitian Zhou and David Jurgens and David Bamman},
+      year={2023},
+      eprint={2311.09130},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL}
+}` }  </pre>
 </div>
 
 
