@@ -1,9 +1,9 @@
 <script> 
   import {base} from "$app/paths";
   const clusters = [
+    {name: "Scalar increase", path: `${base}/semclusters/scalar.png`},
     {name: "Surprise narrative", path: `${base}/semclusters/surprise.png`},
     {name: "Declaration", path: `${base}/semclusters/declare.png`},
-    {name: "Scalar increase", path: `${base}/semclusters/scalar.png`},
     {name: "Similarity / parts of a whole", path: `${base}/semclusters/similarity.png`},
     {name: "Concern", path: `${base}/semclusters/concern.png`},
     {name: "Me and the boys", path: `${base}/semclusters/me_and_the_boys.png`},

@@ -99,7 +99,7 @@ import { balancer } from "svelte-action-balancer";
 
   <p>Use the dropdown below to view some more examples of semantic clusters.</p>
 
-  <Figure caption="Visually diverse clusters emerge even for complex semantic functions like a surprise narrative."> 
+  <Figure caption="Visually diverse clusters emerge even for complex semantic functions."> 
     <SemClusters/>
   </Figure>
   <h2>Conclusion</h2>
