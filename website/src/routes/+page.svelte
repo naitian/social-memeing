@@ -114,14 +114,22 @@ import { balancer } from "svelte-action-balancer";
 
   </p>
   <pre><span></span>
-{`
-@misc{zhou2023social,
-      title={Social Meme-ing: Measuring Linguistic Variation in Memes}, 
-      author={Naitian Zhou and David Jurgens and David Bamman},
-      year={2023},
-      eprint={2311.09130},
-      archivePrefix={arXiv},
-      primaryClass={cs.CL}
+{`@inproceedings{zhou-etal-2024-social,
+  title = "Social Meme-ing: Measuring Linguistic Variation in Memes",
+  author = "Zhou, Naitian  and
+    Jurgens, David  and
+    Bamman, David",
+  editor = "Duh, Kevin  and
+    Gomez, Helena  and
+    Bethard, Steven",
+  booktitle = "Proceedings of the 2024 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies (Volume 1: Long Papers)",
+  month = jun,
+  year = "2024",
+  address = "Mexico City, Mexico",
+  publisher = "Association for Computational Linguistics",
+  url = "https://aclanthology.org/2024.naacl-long.166",
+  pages = "3005--3024",
+  abstract = "Much work in the space of NLP has used computational methods to explore sociolinguistic variation in text. In this paper, we argue that memes, as multimodal forms of language comprised of visual templates and text, also exhibit meaningful social variation. We construct a computational pipeline to cluster individual instances of memes into templates and semantic variables, taking advantage of their multimodal structure in doing so. We apply this method to a large collection of meme images from Reddit and make available the resulting SemanticMemes dataset of 3.8M images clustered by their semantic function. We use these clusters to analyze linguistic variation in memes, discovering not only that socially meaningful variation in meme usage exists between subreddits, but that patterns of meme innovation and acculturation within these communities align with previous findings on written language.",
 }` }  </pre>
 </div>
 
