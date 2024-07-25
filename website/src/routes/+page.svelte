@@ -27,7 +27,7 @@ import { balancer } from "svelte-action-balancer";
   </div>
 
   <div class="links">
-    <a href="https://arxiv.org/abs/2311.09130">📝 Read the Paper</a>
+    <a href="https://aclanthology.org/2024.naacl-long.166.pdf">📝 Read the Paper</a>
     <a href="https://github.com/naitian/social-memeing">💻 View the Code</a>
     <a href="#data">📊 Get the data</a>
   </div>
@@ -95,7 +95,7 @@ import { balancer } from "svelte-action-balancer";
   </p>
 
   <h2 id="data">Explore the data</h2>
-  <p>You can download the dataset with Reddit post ID, image URL, RoBERTa semantic cluster label, and template visual cluster label <a href="https://ischool.berkeley.edu/~naitian/social-memeing/semantic_memes_roberta.tar.gz">at this link</a> (63MB gzipped).</p>
+  <p>You can download the dataset with Reddit post ID, image URL, RoBERTa semantic cluster label, and template visual cluster label <a href="https://people.ischool.berkeley.edu/~naitian/social-memeing/semantic_memes_roberta.tar.gz">at this link</a> (63MB gzipped).</p>
 
   <p>Use the dropdown below to view some more examples of semantic clusters.</p>
 
